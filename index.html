@@ -1,42 +1,55 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<html>
+  <title>pokerwatch</title>
 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 
-<script type="text/javascript" src="index.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-<div id="game" class="container">
-  <div class="jumbotron">
-    <h1 class="display-3">Manuels Pokerwatch</h1>
-    <p class="lead">This is a simple yet powerful pokerwatch.</p>
-    <hr class="my-2">
-    <div id="watch" style="display: none;">
-        <ul class="list-group">
-        <li class="list-group-item"><div><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="time"></span></div></li>
-        <li class="list-group-item"><div><i class="fa fa-circle-o-notch" aria-hidden="true"></i> <span id="round">1</span></div></li>
-        <li class="list-group-item"><div><i class="fa fa-money" aria-hidden="true"></i> <span id="smallBlind"></span></div></li>
-        <li class="list-group-item"><div><i class="fa fa-money" aria-hidden="true"></i><i class="fa fa-money" aria-hidden="true"></i> <span id="bigBlind"></span></div></li>
-        </ul>
-        <button type="button" class="btn btn-primary btn-lg" id="reset" onclick="window.location.reload()">New Game</button>
+  <script type="text/javascript" src="index.js"></script>
+
+  <div id="game" class="container">
+    <div class="jumbotron">
+      <h1 class="display-3">Pokerwatch</h1>
+      <p class="lead">This is a simple yet powerful pokerwatch.</p>
+      <hr class="my-2">
+      <div id="watch" style="display: none;">
+          <ul class="list-group">
+          <li class="list-group-item"><div><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="time"></span></div></li>
+          <li class="list-group-item"><div><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i> <span id="round">1</span></div></li>
+          <li class="list-group-item"><div><i class="fa fa-money" aria-hidden="true"></i> <span id="smallBlind"></span></div></li>
+          <li class="list-group-item"><div><i class="fa fa-money" aria-hidden="true"></i> <i class="fa fa-money" aria-hidden="true"></i> <span id="bigBlind"></span></div></li>
+          </ul>
+          <button type="button" class="btn btn-primary btn-lg" id="reset" onclick="window.location.reload()">New Game</button>
+      </div>
+
+      <div id="input" class="form-group">
+        <input type="number" placeholder="Time in minutes for one round." maxlength="4" style="font-size: 18" class="form-control" id="timeinput">
+        <p></p>
+        <input type="number" placeholder="Start blind." maxlength="4" style="font-size: 18" class="form-control" id="blindinput">
+        <p></p>
+        <button type="button" class="btn btn-primary btn-lg" id="start" onclick="startGame()">Start Game</button>
+      </div>
     </div>
-
-    <div id="input" class="form-group">
-      <input type="number" placeholder="Time in minutes for one round." maxlength="4" style="font-size: 18" class="form-control" id="timeinput">
-      <p></p>
-      <button type="button" class="btn btn-primary btn-lg" id="start" onclick="startGame()">Start Game</button>
+    <div style="font-size: 12">
+      <p>This software is licensed under <b>The Unlicense</b>.</p>
+      <p>For more information, please refer to <b> http://unlicense.org/ </b></p>
     </div>
   </div>
-</div>
 
 
-<style>
-  #game {
-      text-align: center;
-      font-size: 18;
-  }
-  #timeinput {
-    text-align:center;
-  }
-</style>
+  <style>
+    #game {
+        text-align: center;
+        font-size: 18;
+    }
+    #timeinput {
+      text-align:center;
+    }
+    #blindinput {
+      text-align:center;
+    }
+  </style>
+</html>

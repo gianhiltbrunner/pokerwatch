@@ -26,6 +26,12 @@ function startTimer(duration, display) {
 
 function startGame() {
     var time = document.querySelector('#timeinput').value;
+    baseBlind = document.querySelector('#blindinput').value;
+
+    console.log(time);
+
+    if (time == 0){time = 10;}//Sets standard value
+    if (baseBlind == 0){baseBlind = 10;}
 
     document.querySelector('#smallBlind').textContent =  baseBlind;
     document.querySelector('#bigBlind').textContent = 2 * baseBlind;
