@@ -14,8 +14,7 @@
     <hr class="my-2">
     <div id="watch" style="display: none;">
         <ul class="list-group">
-        <li class="list-group-item"><div><span id="time"></span> <i class="fa fa-clock-o" aria-hidden="true"></i>
-</div></li>
+        <li class="list-group-item"><div><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="time"></span></div></li>
         <li class="list-group-item"><div><i class="fa fa-circle-o-notch" aria-hidden="true"></i> <span id="round">1</span></div></li>
         <li class="list-group-item"><div><i class="fa fa-money" aria-hidden="true"></i> <span id="smallBlind"></span></div></li>
         <li class="list-group-item"><div><i class="fa fa-money" aria-hidden="true"></i><i class="fa fa-money" aria-hidden="true"></i> <span id="bigBlind"></span></div></li>
@@ -24,7 +23,7 @@
     </div>
 
     <div id="input" class="form-group">
-      <input type="number" placeholder="Time in minutes." maxlength="4" class="form-control" id="timeinput">
+      <input type="number" placeholder="Time in minutes for one round." maxlength="4" style="font-size: 18" class="form-control" id="timeinput">
       <p></p>
       <button type="button" class="btn btn-primary btn-lg" id="start" onclick="startGame()">Start Game</button>
     </div>
@@ -35,6 +34,7 @@
 <style>
   #game {
       text-align: center;
+      font-size: 18;
   }
   #timeinput {
     text-align:center;

@@ -1,5 +1,5 @@
 var round = 1;
-var baseBlind = 10; //Change in div / Set to start values
+var baseBlind = 10;
 var audio = new Audio('notification.mp3');
 
 function startTimer(duration, display) {
@@ -21,7 +21,7 @@ function startTimer(duration, display) {
 
             audio.play();//notification
         }
-    }, 1000);
+    }, 1000);//1 sec
 }
 
 function startGame() {
