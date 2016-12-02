@@ -19,7 +19,7 @@ function startTimer(duration, display) {
             document.querySelector('#smallBlind').textContent =  baseBlind * round;
             document.querySelector('#bigBlind').textContent = 2 * baseBlind * round;
 
-            audio.play();
+            audio.play();//notification
         }
     }, 1000);
 }
