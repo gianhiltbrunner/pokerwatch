@@ -1,5 +1,6 @@
 var round = 1;
 var baseBlind = 10; //Change in div / Set to start values
+var audio = new Audio('notification.mp3');
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -17,6 +18,8 @@ function startTimer(duration, display) {
             document.querySelector('#round').textContent =  ++round;
             document.querySelector('#smallBlind').textContent =  baseBlind * round;
             document.querySelector('#bigBlind').textContent = 2 * baseBlind * round;
+
+            audio.play();
         }
     }, 1000);
 }
